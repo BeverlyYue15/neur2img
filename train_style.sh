@@ -1,0 +1,29 @@
+accelerate launch --config_file kontext_easycontrol.yaml train_style.py \
+  --pretrained_model_name_or_path='black-forest-labs/FLUX.1-Kontext-dev'  \
+  --output_dir="./style_adapter_eeg_1-80_multi" \
+  --mixed_precision="bf16" \
+  --resolution=512 \
+  --cond_size=512 \
+  --train_batch_size=1 \
+  --guidance_scale=3.5 \
+  --gradient_accumulation_steps=4 \
+  --optimizer="adamw" \
+  --learning_rate=1e-4 \
+  --lr_scheduler="constant" \
+  --lr_warmup_steps=0 \
+  --max_train_steps=12000 \
+  --rank=128 \
+  --lora_alpha=128 \
+  --seed="0" \
+  --instance_data_dir="/raid/workspace1/lc/Image2PSD/psd_data/PSD_Train_Mask/" \
+  --num_validation_images=2 \
+  --instance_prompt="Using the provided EEG signals to perform style transfer." \
+  --checkpoints_total_limit=10 \
+  --checkpointing_steps=500 \
+  --validation_steps=2000 \
+  --use_eeg
+  # --report_to="wandb" \
+# --dataset_name="configs/PSD_mask_10k.jsonl" \
+  # --image_column="front" \
+  # --cond_image_column="mask" \
+  # --subject_column="current" \

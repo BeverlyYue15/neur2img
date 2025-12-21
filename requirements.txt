@@ -1,0 +1,49 @@
+# PyTorch and related libraries
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Transformers and Diffusers
+transformers>=4.30.0
+diffusers>=0.34.0
+accelerate>=0.20.0
+
+# PEFT (Parameter-Efficient Fine-Tuning)
+peft>=0.4.0
+
+# HuggingFace Hub
+huggingface-hub>=0.16.0
+
+# Image processing
+Pillow>=9.0.0
+
+# Progress bar
+tqdm>=4.65.0
+
+# Tensor serialization
+safetensors>=0.3.0
+
+# Data handling
+numpy>=1.24.0
+pandas>=1.5.0
+openpyxl>=3.0.0
+
+# Logging and tracking (optional)
+wandb>=0.15.0
+tensorboard>=2.13.0
+
+# Regular expressions (usually built-in, but explicit for compatibility)
+regex>=2023.0.0
+
+# Python standard libraries (usually included, listed for completeness)
+# argparse - built-in
+# logging - built-in
+# math - built-in
+# os - built-in
+# pathlib - built-in
+# pickle - built-in
+# shutil - built-in
+# warnings - built-in
+# contextlib - built-in
+# copy - built-in
+# itertools - built-in
+# random - built-in
