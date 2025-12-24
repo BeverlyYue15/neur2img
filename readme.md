@@ -7,7 +7,6 @@
 **Uni-Neur2Img: Unified Brain Signal-guided Image Generation, Editing, and Stylization**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2512.18635-b31b1b.svg)](https://arxiv.org/abs/2512.18635)
-[![Project Page]]
 
 </div>
 
