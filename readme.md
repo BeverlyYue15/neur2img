@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Uni-Neur2Img](assets/teaser.png)
+![Uni-Neur2Img](assets/teaser1.png)
 
 **Uni-Neur2Img: Unified Brain Signal-guided Image Generation, Editing, and Stylization**
 
@@ -14,60 +14,31 @@
 
 ## Introduction
 
-### Background
+**Uni-Neur2Img** is a unified framework designed for neural signal-driven image generation, editing, and stylization. By leveraging the power of Diffusion Transformers (DiT), our model bridges the gap between human neural activity (EEG) and visual content creation.
 
-Neural style transfer has emerged as a transformative technique in computer vision, enabling the synthesis of images that combine the content of one image with the artistic style of another. However, traditional style transfer methods rely on explicit style reference images, limiting their applicability in scenarios where users wish to express **subjective, cognitive-level aesthetic preferences**.
+**Existing research** in brain-to-image generation often relies on **textual modalities as intermediate representations**, which limits the direct visual expressiveness of neural signals. To address this, **Uni-Neur2Img** introduces a parameter-efficient approach to **directly inject neural signals into the generative process**.
 
-Recent advances in **Brain-Computer Interfaces (BCI)** have demonstrated that electroencephalogram (EEG) signals can capture rich information about human perception, emotion, and aesthetic preferences. This opens a novel pathway: **using brain signals to directly guide image generation**, bypassing the need for explicit style references.
 
-### Motivation
+### Key Contributions:
+Unified Framework: A single architecture that supports multiple tasks: neural-guided image generation, editing, and stylization.
 
-This project addresses a fundamental question: *Can we decode human aesthetic preferences from EEG signals and use them to condition neural style transfer?*
+LoRA-based Neural Injection: We utilize a parameter-efficient LoRA module to process conditioning signals (EEG, Text, etc.) as pluggable components, allowing for flexible multi-modal conditioning without retraining the base model.
 
-As illustrated in the teaser figure above, **Uni-Neur2Img** achieves three unified capabilities through brain signal guidance:
-- 🎨 **Generation**: Create images from neural signals
-- ✏️ **Editing**: Modify existing images based on brain responses  
-- 🖼️ **Stylization**: Transfer artistic styles guided by EEG preferences
+Causal Attention Mechanism: Designed to handle the long-sequence modeling requirements inherent in complex neural signal conditioning.
 
-The key challenges include:
-1. **Cross-modal alignment**: Bridging the semantic gap between EEG signals and visual representations
-2. **Signal variability**: Handling the high noise and individual differences inherent in EEG data
-3. **Integration with generative models**: Efficiently conditioning state-of-the-art diffusion models with EEG features
+EEG-Style Dataset: To facilitate research on visual-modality conditioning, we introduce a new dataset focused on the intersection of EEG signals and artistic styles.
 
-### Our Approach
+State-of-the-Art Performance: Our framework demonstrates superior performance in reconstructing and manipulating images that align with both neural activity and textual descriptions.
 
-We propose an **EEG-Guided Style Transfer** framework that integrates:
-
-| Component | Role |
-|-----------|------|
-| **EEG Encoder** | Extracts meaningful features from raw EEG signals |
-| **Dual EEG Adapter** | Translates EEG features into text embedding space compatible with diffusion models |
-| **FLUX.1-Kontext-dev** | State-of-the-art diffusion transformer for high-quality image generation |
-| **LoRA Fine-tuning** | Parameter-efficient adaptation (rank=128) preserving base model capabilities |
-
-### Contributions
-
-- **Novel cross-modal conditioning**: First framework to use EEG signals for conditioning Flux-based diffusion models
-- **Unified pipeline**: Supports generation, editing, and stylization in one framework
-- **Efficient adaptation**: LoRA-based training enabling fine-tuning with limited computational resources
-- **End-to-end pipeline**: Complete training and inference code for reproducible research
 
 📄 **Paper**: [Uni-Neur2Img: Unified Brain Signal-guided Image Generation, Editing, and Stylization](https://arxiv.org/abs/2512.18635)
 
----
-**Architecture:**
-- **FluxTransformer2DModel**: Base diffusion model
-- **EEGEncoder**: Processes EEG signals
-- **DualEEGAdapter**: Converts EEG to text embeddings
-- **LoRA**: 19 double-stream + 38 single-stream blocks (rank=128)
 
 ## Installation
 
 ```bash
 pip install -r requirements.txt
 ```
-
-**Requirements:** Python 3.8+, PyTorch 2.0+, Transformers, Diffusers >= 0.34.0, Accelerate, PEFT
 
 ## Dataset Structure
 
