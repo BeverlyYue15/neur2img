@@ -20,15 +20,15 @@
 
 
 ### Key Contributions:
-Unified Framework: A single architecture that supports multiple tasks: neural-guided image generation, editing, and stylization.
+**Unified Framework:** A single architecture that supports multiple tasks: neural-guided image generation, editing, and stylization.
 
-LoRA-based Neural Injection: We utilize a parameter-efficient LoRA module to process conditioning signals (EEG, Text, etc.) as pluggable components, allowing for flexible multi-modal conditioning without retraining the base model.
+**LoRA-based Neural Injection:** We utilize a parameter-efficient LoRA module to process conditioning signals (EEG, Text, etc.) as pluggable components, allowing for flexible multi-modal conditioning without retraining the base model.
 
-Causal Attention Mechanism: Designed to handle the long-sequence modeling requirements inherent in complex neural signal conditioning.
+**Causal Attention Mechanism:** Designed to handle the long-sequence modeling requirements inherent in complex neural signal conditioning.
 
-EEG-Style Dataset: To facilitate research on visual-modality conditioning, we introduce a new dataset focused on the intersection of EEG signals and artistic styles.
+**EEG-Style Dataset**: To facilitate research on visual-modality conditioning, we introduce a new dataset focused on the intersection of EEG signals and artistic styles.
 
-State-of-the-Art Performance: Our framework demonstrates superior performance in reconstructing and manipulating images that align with both neural activity and textual descriptions.
+**State-of-the-Art Performance:** Our framework demonstrates superior performance in reconstructing and manipulating images that align with both neural activity and textual descriptions.
 
 
 📄 **Paper**: [Uni-Neur2Img: Unified Brain Signal-guided Image Generation, Editing, and Stylization](https://arxiv.org/abs/2512.18635)
