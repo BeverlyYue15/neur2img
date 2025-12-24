@@ -1,4 +1,4 @@
-# Uni-Neur2Img: EEG-Guided Style Transfer Training
+# Uni-Neur2Img
 
 <div align="center">
 
@@ -7,7 +7,7 @@
 **Uni-Neur2Img: Unified Brain Signal-guided Image Generation, Editing, and Stylization**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2512.18635-b31b1b.svg)](https://arxiv.org/abs/2512.18635)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://github.com/your-repo)
+[![Project Page]]
 
 </div>
 
@@ -159,3 +159,4 @@ image = pipeline(prompt_embeds=prompt_embeds, pooled_prompt_embeds=pooled_embeds
 ## License
 
 Adhere to FLUX.1-Kontext-dev licensing terms from Black Forest Labs.
+
