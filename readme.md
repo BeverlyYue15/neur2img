@@ -41,6 +41,7 @@ pip install -r requirements.txt
 ```
 
 ## Dataset Structure
+**EEG-Style dataset will be made publicly available after the article is accepted.**
 
 Required files:
 - `train_multi.pt`: Packed EEG signals and metadata
@@ -129,4 +130,5 @@ image = pipeline(prompt_embeds=prompt_embeds, pooled_prompt_embeds=pooled_embeds
 ## License
 
 Adhere to FLUX.1-Kontext-dev licensing terms from Black Forest Labs.
+
 
